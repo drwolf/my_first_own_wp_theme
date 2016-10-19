@@ -1,0 +1,34 @@
+/*
+Theme Name: Tutorial
+Theme URI: http://lerntemplate.byethost14.com/
+Description: Template zum WordPress Tutorial auf http://wordpress.lernenhoch2.de
+Author: Robert Wolf following Christian Strang
+Author URI: https://railsrob.wordpress.com/
+*/
+
+body        {color: #333; background: #e5e5e5;}
+ 
+#wrapper    {width: 850px; margin: auto; text-align: justify; background: #fff;}
+/* #header        {height: 160px; padding: 20px; } */
+#main       {width: 520px; padding: 20px; float: left;}
+#sidebar    {width: 270px; padding: 10px; padding-top: 20px; float: left;}
+#footer        {clear: both; height: 100px; padding: 20px; }
+
+#header {
+	background: #90a090;
+	border-bottom: double 3px #aba;
+	border-left: solid 0px #9a9;
+	border-right: solid 0px #565;
+	border-top: solid 0px #9a9;
+	font: italic normal 180% 'Times New Roman', Times, serif;
+	letter-spacing: 0.1em;
+	margin: 0;
+	padding: 15px 10px 15px 60px;
+background: url("<?php bloginfo('stylesheet_directory'); ?>/images/robertwolf_header.gif") 
+  no-repeat bottom center; }
+
+#headerimg  {
+  margin: 7px 9px 0; 
+  height: 192px; 
+  width: 740px; }
+
