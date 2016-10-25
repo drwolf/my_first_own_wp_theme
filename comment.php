@@ -11,4 +11,37 @@
             <input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
             <label for="email">E-Mail<small>(wird nicht ver&ouml;ffentlicht)</small></label>
         </p>
-</div>
+        <p>
+            <input type="text" name="url"  id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
+            <label for="url">Webseite</label>
+        </p>
+        
+        <p>
+            Kommentar
+            <textarea name="comment" id="comment" style="width: 100%;" rows="10" tabindex="4"></textarea>
+        </p>
+        
+        <p>
+        <input name="submit" type="submit" id="submit" tabindex="5" value="Kommentar abschicken" />
+        <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
+        </p>
+        
+        <?php do_action('comment_form', $post_ID); ?>
+</form>
+</div><!-- Kommentar-Formular -->
+
+<div id="kommentare">
+    <?php foreach ($comments as $comment) : ?>
+        
+        <div class="comment" id="comment-<?php comment_ID() ?>">
+            <small class="commentmetadata"><?php comment_author_link() ?> <strong>|</strong> am <?php comment_date('j. F Y') ?> um <?php comment_time('H:i') ?> Uhr</small>
+            
+            <?php comment_text(); ?>
+            
+            <?php if ($comment->comment_approved == '0') : ?>
+                <strong>Achtung: Dein Kommentar muss erst noch freigegeben werden.</strong><br />
+            <?php endif; ?>
+            
+        </div>
+    <?php endforeach; /* end for each comment */ ?>
+</div><!-- kommentare -->

@@ -15,6 +15,9 @@
 			<p align="center"><?php next_posts_link('&laquo; &Auml;ltere Eintr&auml;ge') ?> | <?php previous_posts_link('Neuere Eint&auml;ge &raquo;') ?></p>
 
 		<?php endif; ?>
+		
+		<?php comments_template(); ?>
+		
 	</div><!-- main -->
  
    <div id="sidebar">
